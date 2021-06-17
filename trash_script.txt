@@ -1,0 +1,265 @@
+import React from 'react';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+import {
+  Container,
+  Content,
+  Card,
+  CardItem,
+  Body,
+  Thumbnail,
+  H1,
+  H2,
+  H3,
+  Left,
+  Right,
+} from 'native-base';
+import {NavigationContainer} from '@react-navigation/native';
+import {createDrawerNavigator} from '@react-navigation/drawer'
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+
+import logo from './assets/images/img-placeholder.jpg';
+
+const About = () => {
+  
+
+  return(
+   <>
+   <Container style={styles.container}>
+      <Content padder>
+        <View style={styles.grid}>
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail square large source={logo} style={{width:'100%', height:150}}/>
+            </CardItem>
+            <CardItem>
+              <Body>                
+                <View>
+                  <H3>Eshop</H3>
+                  <Text>Lorem ipsum iis a dummy text description... </Text>  
+
+                  <TouchableOpacity>
+                    <Text>
+                      Add to Cart
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail square large source={logo} style={{width:'100%', height:150}}/>
+            </CardItem>
+            <CardItem>
+              <Body>                
+                <View>
+                  <H3>Eshop</H3>
+                  <Text>Lorem ipsum iis a dummy text description... </Text>  
+
+                  <TouchableOpacity>
+                    <Text>
+                      Add to Cart
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail square large source={logo} style={{width:'100%', height:150}}/>
+            </CardItem>
+            <CardItem>
+              <Body>                
+                <View>
+                  <H3>Eshop</H3>
+                  <Text>Lorem ipsum iis a dummy text description... </Text>  
+
+                  <TouchableOpacity>
+                    <Text>
+                      Add to Cart
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail square large source={logo} style={{width:'100%', height:150}}/>
+            </CardItem>
+            <CardItem>
+              <Body>                
+                <View>
+                  <H3>Eshop</H3>
+                  <Text>Lorem ipsum iis a dummy text description... </Text>  
+
+                  <TouchableOpacity>
+                    <Text>
+                      Add to Cart
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                
+              </Body>
+            </CardItem>
+          </Card>
+        </View>
+        
+      </Content>
+    
+    
+    </Container>
+   </> 
+  )
+}
+
+const Home = () => {
+  return(
+    <>
+    <Text>Home</Text>
+    </>
+  )
+}
+
+
+const App = () => {
+  const Drawer = createDrawerNavigator();
+  const Tab = createBottomTabNavigator();
+  return(
+    <>
+    {/* <Container style={styles.container}>
+      <Content padder>
+        <View style={styles.grid}>
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail square large source={logo} style={{width:'100%', height:150}}/>
+            </CardItem>
+            <CardItem>
+              <Body>                
+                <View>
+                  <H3>Eshop</H3>
+                  <Text>Lorem ipsum iis a dummy text description... </Text>  
+
+                  <TouchableOpacity>
+                    <Text>
+                      Add to Cart
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail square large source={logo} style={{width:'100%', height:150}}/>
+            </CardItem>
+            <CardItem>
+              <Body>                
+                <View>
+                  <H3>Eshop</H3>
+                  <Text>Lorem ipsum iis a dummy text description... </Text>  
+
+                  <TouchableOpacity>
+                    <Text>
+                      Add to Cart
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail square large source={logo} style={{width:'100%', height:150}}/>
+            </CardItem>
+            <CardItem>
+              <Body>                
+                <View>
+                  <H3>Eshop</H3>
+                  <Text>Lorem ipsum iis a dummy text description... </Text>  
+
+                  <TouchableOpacity>
+                    <Text>
+                      Add to Cart
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                
+              </Body>
+            </CardItem>
+          </Card>
+
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail square large source={logo} style={{width:'100%', height:150}}/>
+            </CardItem>
+            <CardItem>
+              <Body>                
+                <View>
+                  <H3>Eshop</H3>
+                  <Text>Lorem ipsum iis a dummy text description... </Text>  
+
+                  <TouchableOpacity>
+                    <Text>
+                      Add to Cart
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                
+              </Body>
+            </CardItem>
+          </Card>
+        </View>
+        
+      </Content>
+    </Container> */}
+    <NavigationContainer>
+      <Drawer.Navigator>
+        <Drawer.Screen name="App" component={Home} />
+        <Drawer.Screen name="About" component={About} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="About" component={About} />
+      </Tab.Navigator>
+      </NavigationContainer>
+    </>
+  )
+}
+
+export default App;
+
+const styles = StyleSheet.create({
+  container : {
+
+  },
+  grid: {
+    display:'flex',
+    flex:1,
+    flexDirection:'row',
+    flexWrap:'wrap',
+  },
+  card : {
+    width:'48.5%',
+    
+  }
+})
